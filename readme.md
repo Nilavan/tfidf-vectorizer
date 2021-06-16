@@ -28,7 +28,6 @@ $IDF(t) = \log_{e}\frac{\text{Total  number of documents}} {\text{Number of docu
 
 </li>
 </ul>
-<br>
 
 ## Example
 
