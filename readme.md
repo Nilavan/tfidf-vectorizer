@@ -14,17 +14,19 @@ Typically, the tf-idf weight is composed by two terms: the first computes the no
 
  <ul>
     <li>
-<strong>TF:</strong> Term Frequency, which measures how frequently a term occurs in a document. Since every document is different in length, it is possible that a term would appear much more times in long documents than shorter ones. Thus, the term frequency is often divided by the document length (aka. the total number of terms in the document) as a way of normalization: <br>
+<strong>TF:</strong> Term Frequency, which measures how frequently a term occurs in a document. Since every document is different in length, it is possible that a term would appear much more times in long documents than shorter ones. Thus, the term frequency is often divided by the document length (aka. the total number of terms in the document) as a way of normalization: <br><br>
 
-$TF(t) = \frac{\text{Number of times term t appears in a document}}{\text{Total number of terms in the document}}.$
+<p align="center"><img src="https://latex.codecogs.com/png.latex?\bg_white&space;\fn_cm&space;TF(t)&space;=&space;\frac{\text{Number&space;of&space;times&space;term&space;t&space;appears&space;in&space;a&space;document}}{\text{Total&space;number&space;of&space;terms&space;in&space;the&space;document}}" title="TF(t) = \frac{\text{Number of times term t appears in a document}}{\text{Total number of terms in the document}}" width=70%/></p><br>
 
 </li>
 <li>
-<strong>IDF:</strong> Inverse Document Frequency, which measures how important a term is. While computing TF, all terms are considered equally important. However it is known that certain terms, such as "is", "of", and "that", may appear a lot of times but have little importance. Thus we need to weigh down the frequent terms while scale up the rare ones, by computing the following: <br>
+<strong>IDF:</strong> Inverse Document Frequency, which measures how important a term is. While computing TF, all terms are considered equally important. However it is known that certain terms, such as "is", "of", and "that", may appear a lot of times but have little importance. Thus we need to weigh down the frequent terms while scale up the rare ones, by computing the following: <br><br>
 
-$IDF(t) = \log_{e}\frac{\text{Total  number of documents}} {\text{Number of documents with term t in it}}.$
-for numerical stabiltiy we will be changing this formula little bit
-$IDF(t) = \log_{e}\frac{\text{Total  number of documents}} {\text{Number of documents with term t in it}+1}.$
+<p align="center"><img src="https://latex.codecogs.com/png.latex?\bg_white&space;\fn_cm&space;IDF(t)&space;=&space;\log_{e}\frac{\text{Total&space;number&space;of&space;documents}}&space;{\text{Number&space;of&space;documents&space;with&space;term&space;t&space;in&space;it}}" title="IDF(t) = \log_{e}\frac{\text{Total number of documents}} {\text{Number of documents with term t in it}}" width=70%/></p><br>
+
+for numerical stabiltiy we will be changing this formula little bit<br><br>
+
+<p align="center"><img src="https://latex.codecogs.com/png.latex?\bg_white&space;\fn_cm&space;IDF(t)&space;=&space;\log_{e}\frac{\text{Total&space;number&space;of&space;documents}}&space;{\text{Number&space;of&space;documents&space;with&space;term&space;t&space;in&space;it}&plus;1}" title="IDF(t) = \log_{e}\frac{\text{Total number of documents}} {\text{Number of documents with term t in it}+1}" width=70%/></p><br>
 
 </li>
 </ul>
